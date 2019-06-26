@@ -13,7 +13,7 @@
  * @version 2.1
  */
 
-namespace neto737\BitGoSDK\Enum;
+namespace bjolbordi\BitGoSDK\Enum;
 
 abstract class CurrencyCode {    
     //PRODUCTION

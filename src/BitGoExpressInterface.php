@@ -13,7 +13,7 @@
  * @version 2.1
  */
 
-namespace neto737\BitGoSDK;
+namespace bjolbordi\BitGoSDK;
 
 interface BitGoExpressInterface {
 
