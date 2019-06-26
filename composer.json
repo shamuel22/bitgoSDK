@@ -1,5 +1,5 @@
 {
-    "name": "bjolbordi/bitgoSDK",
+    "name": "bjolbordi/bitgoaviorco-sdk",
     "description": "A BitGo SDK written in PHP",
     "type": "library",
     "keywords": ["bitgo", "sdk", "bitcoin"],
