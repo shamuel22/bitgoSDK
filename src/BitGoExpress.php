@@ -228,6 +228,14 @@ class BitGoExpress implements BitGoExpressInterface {
         return $this->__execute('POST');
     }
 
+    public function verifyAddress(string $walletAddress) {
+        $this->url = $this->APIEndpoint . '/verifyaddress';
+        $this->params = [
+            'address' => $walletAddress
+        ];
+        return $this->__execute('POST');
+    }
+
     /**
      * This SDK call will consolidate the unspents that match the parameters, and consolidate them into the number specified by 'numUnspentsToMake'.
      * 

@@ -1,5 +1,5 @@
 {
-    "name": "neto737/bitgosdk-php",
+    "name": "bjolbordi/bitgosdk-php",
     "description": "A BitGo SDK written in PHP",
     "type": "library",
     "keywords": ["bitgo", "sdk", "bitcoin"],
@@ -7,14 +7,14 @@
 
     "authors": [
         {
-            "name": "Neto Melo",
-            "email": "neto737@live.com"
+            "name": "jolbordo gvelo",
+            "email": "bjolbordi@gmail.com"
         }
     ],
 
     "autoload": {
         "psr-4": {
-            "neto737\\BitGoSDK\\": "src/"
+            "bjolbordi\\BitGoSDK\\": "src/"
         }
     },
 
