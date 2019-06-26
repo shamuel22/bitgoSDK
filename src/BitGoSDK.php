@@ -646,6 +646,24 @@ class BitGoSDK implements BitGoSDKInterface {
     }
 
     /**
+     * Add a webhook that will result in an HTTP callback at the specified URL from BitGo when events are triggered.
+     * 
+     * @param string $url           URL to fire the webhook to.
+     * @param string $type          Type of event to listen to (can be 'block' or 'wallet_confirmation').
+     * @param int $numConfirmations Number of confirmations before triggering the webhook. If 0 or unspecified, requests will be sent to the callback endpoint when the transfer is first seen and when it is confirmed.
+     * @return array
+     */
+    public function addBlockWebhook(string $url, string $type, int $numConfirmations = null) {
+        $this->url = $this->APIEndpoint . '/webhooks';
+        $this->params = [
+            'url' => $url,
+            'type' => $type,
+            'numConfirmations' => $numConfirmations
+        ];
+        return $this->__execute('POST');
+    }
+
+    /**
      * Removing a webhook will cause new events of the specified type to no longer trigger HTTP callbacks to your URLs.
      * 
      * @param string $url   URL for callback requests to be made at.
