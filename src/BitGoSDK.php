@@ -682,6 +682,22 @@ class BitGoSDK implements BitGoSDKInterface {
     }
 
     /**
+     * Removing a webhook will cause new events of the specified type to no longer trigger HTTP callbacks to your URLs.
+     * 
+     * @param string $url   URL for callback requests to be made at.
+     * @param string $type  Type of event to listen to (can be 'transfer' or 'pendingaapproval').
+     * @return array
+     */
+    public function removeBlockWebhook(string $url, string $type) {
+        $this->url = $this->APIEndpoint . '/webhooks';
+        $this->params = [
+            'url' => $url,
+            'type' => $type
+        ];
+        return $this->__execute('DELETE');
+    }
+
+    /**
      * This API allows you to simulate and test a webhook so you can view its response.
      * 
      * @param string $webhookId         Webhook ID.
