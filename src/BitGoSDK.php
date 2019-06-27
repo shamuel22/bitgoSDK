@@ -644,7 +644,7 @@ class BitGoSDK implements BitGoSDKInterface {
         ];
         return $this->__execute('POST');
     }
-    
+
 
     /**
      * Add a webhook that will result in an HTTP callback at the specified URL from BitGo when events are triggered.
@@ -663,6 +663,7 @@ class BitGoSDK implements BitGoSDKInterface {
         ];
         return $this->__execute('POST');
     }
+    
 
     /**
      * Removing a webhook will cause new events of the specified type to no longer trigger HTTP callbacks to your URLs.
